@@ -1,0 +1,176 @@
+.header {
+  width: 100%;
+  z-index: 1;
+}
+
+.mobile-h1 {
+  display: none;
+}
+
+#header {
+  background: #fff;
+  color: #F08F90;
+  filter: drop-shadow(0px 5px 5px #ddd);
+}
+
+#header h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 6%;
+  filter: drop-shadow(1px 1px #C93756);
+}
+
+#header h2 {
+  font-size: 15px;
+  font-weight: 400;
+  display: block;
+  filter: drop-shadow(1px 1px #C93756);
+}
+
+header .group {
+  position: relative;
+  margin: 0 5% 0 5%;
+  padding: 0px 2% 0px 2%;
+}
+
+.header-name {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 7px 7px 7px 7px;
+  line-height: 2px;
+}
+
+.main-logo {
+  height: 50px;
+  vertical-align: middle;
+}
+
+.logo {
+  color: inherit;
+}
+
+nav {
+  clear: none;
+  display: block;
+  position: relative;
+  float: right;
+  top: 7px;
+}
+
+#nav-ul {
+  list-style: none;
+}
+
+#nav-ul li {
+  display: inline-block;
+  padding: 0px 7px 0px 7px;
+}
+
+li > .nav-option {
+  position: relative;
+  color: inherit;
+  font-size: 0.875em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2em 2em 2em;
+  margin-top: 2em;
+}
+
+li > .nav-option::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #F08F90;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > .nav-option:hover {
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 0.3s ease-out;
+}
+
+li > .nav-option:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+span.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 12px;
+  bottom: 18px;
+  color: #fff;
+  filter: drop-shadow(1px 1px #F65DAD);
+}
+
+span.menu-toggle:hover,
+span.menu-toggle:focus {
+  color: #ddd;
+}
+
+/* Mobile Media Queries */
+@media screen and (max-width: 768px) {
+  #header h1 {
+    font-size: 1.25em;
+  }
+
+  .desktop-h1 {
+    display: none;
+  }
+
+  .mobile-h1 {
+    display: block;
+  }
+
+  header .group {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav {
+    background-color: #1E1544;
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-ul {
+    margin: 5% auto;
+    width: 50%;
+    padding: 0;
+  }
+
+  .unopened {
+    display: none;
+  }
+
+  .open {
+    display: block;
+  }
+
+  #nav-ul li {
+    display: block;
+    padding: 10px 0;
+    margin-top: 1em;
+  }
+
+  .header-name {
+    margin: 0 5% 0 5%;
+    padding: 2% 2% 1% 2%;
+    line-height: .5em;
+  }
+
+  span.menu-toggle {
+    display: block;
+    margin: 5% 5% 0 5%;
+    padding: 2% 2% 0px 2%;
+  }
+}

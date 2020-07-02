@@ -1,0 +1,55 @@
+.card-container {
+  position: relative;
+  width: 60%;
+  margin: 1em auto 1em auto;
+}
+
+.result-buttons {
+  display: flex;
+  margin: 5% auto;
+}
+
+button {
+  margin-top: 10%;
+  font-size: 16px;
+  color: #F08F90;
+  background-color: #fff;
+  filter: drop-shadow(1px 1px #C93756);
+  outline: none;
+  transition: .2s;
+}
+
+.result-buttons button {
+  font-size: 25px;
+  height: 2em;
+  width: 5em;
+  flex: 1 1 auto;
+  margin: 10% 10%;
+}
+
+button:hover {
+  opacity: 70%;
+  transition: .2s;
+}
+
+button:active {
+  filter: none;
+}
+
+.incorrect-button {
+  margin-left: 5%;
+}
+
+.correct-button {
+  margin-right: 5%;
+}
+
+/* Mobile Media Queries */
+@media screen and (max-width: 768px) {
+  .card-container {
+    width: 100%;
+  }
+  .result-buttons {
+    margin: 2% auto;
+  }
+}
